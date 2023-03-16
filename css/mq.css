@@ -1,0 +1,53 @@
+/* IF the viewport is under 400px do this */
+@media only screen and (min-width:200px) and (max-width: 800px) {
+  html {
+    font-size: .3rem;
+  }
+  .banner {
+    background-color: #4f3047;
+  }
+  .hours ol{
+    display: none;
+  }
+
+  .hero ul {
+    width: 20%;
+  }
+
+  .staff {
+    min-height: 800px;
+    overflow: scroll;
+  }
+  .staff-container {
+    flex: 1 0 40%;
+    height: 12.5rem;
+  }
+}
+/* IF the viewport is btween 401px-800px do this */
+@media only screen and (min-width: 600px) {
+  .banner {
+    background-color: #304F34;
+  }
+ .hours ol{
+    display: none;
+  }
+
+  .hero ul {
+    width: 20%;
+  }
+
+  .staff {
+    min-height: 800px;
+    overflow: scroll;
+  }
+  .staff-container {
+    flex: 1 0 40%;
+    height: 12.5rem;
+  }
+}
+/* IF the viewport is 801px or bigger, do this */
+@media screen and (min-width: 1000px) {
+  .banner {
+    background-color: #300978;
+  }
+}

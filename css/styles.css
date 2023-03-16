@@ -1,0 +1,261 @@
+
+/* 
+1.) Universal Styles
+2.) Header/Nav
+
+COLOR PALLETTE MONOCRHOMATIC(lite to dark):
+#BFBDB8 #8C8987 #404040 #262626 #0D0D0D
+
+#CFCFCF(ltgry) #828282(mdgry) #363636(dkgry) #6D8270(litegrn) #304F34(dkgrn)
+
+CURRENT
+#8DA1B3 #BDD6E0 #363636 #88C470 #304F34
+
+font-family: 'Libre Baskerville', serif;-reg 
+font-family: 'Raleway', sans-serif;-header
+*/
+/* Universal Styles */
+
+html {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  color: #363636;
+  max-width: 1920px;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+main {
+  position: relative;
+  top: 7rem; /* To offset for fixed header. */
+}
+
+a {
+  text-decoration: underline;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: #304F34;
+}
+
+a:hover {
+  color: #88C470;
+}
+
+/* Header/Nav */
+
+header {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  background-color: white;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 7rem;
+}
+
+.banner .img-contain {
+  height: 6rem;
+  width: 6rem;
+  background-image: url(../assets/logo-stand-in-2.png);
+  background-size: cover;
+  margin-left: 2rem;
+  align-self: center;
+}
+
+.logo {
+  display: inline-flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo .hours {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.logo .hours ol {
+  padding: 0 3rem;
+}
+
+nav.nav-bar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  list-style: none;
+}
+
+.nav-bar .main {
+  display: inline-flex;
+}
+
+nav li {
+  padding: 0 1.5rem;
+}
+
+nav a {
+  vertical-align: bottom;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Main/Hero */
+
+main .hero {
+  display: flex;
+  justify-content: center;
+  background-color: #BDD6E0;
+  width: 100%;
+  height: 50%;
+  padding: 2rem 0;
+}
+
+.hero .hero-img {
+  background-image: url(../assets/eventing-training-scaled.png);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-img ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8DA1B3;
+  color: #88C470;
+  height: 100%;
+  width: 20%;
+  text-align: center;
+}
+
+.hero-img ul li {
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+/* Main/Welcome */
+
+main .welcome {
+  display: flex;
+  justify-content: center;
+  height: 6rem;
+  padding-top: 2rem;
+}
+
+
+.staff {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-height: 50rem;
+  overflow: scroll;
+  background-color: #828282;
+}
+
+.staff-container {
+  margin: 2rem;
+  text-align: center;
+}
+
+.staff-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px){
+
+  html{
+    font-size: .8rem;
+  } 
+
+  .staff-mobile {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-height: 80rem;
+    overflow: scroll;
+    background-color: #828282;
+  }
+  .staff-container-mobile {
+    margin: 2rem;
+    text-align: center;
+  }
+  .staff {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  
+  html{
+    font-size: .7rem;
+  } 
+
+  .hours ol{
+    display: none;
+  }
+  .staff-mobile {
+    display: none;
+  }
+  .staff {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 450px){
+  
+  html{
+    font-size: .5rem;
+  }
+  .banner .img-contain {
+    background-size: cover;
+    height: 5rem;
+    width: 5rem;
+    background-repeat: no-repeat;
+  } 
+  .banner {
+    background-color: aquamarine;
+  }
+  nav a {
+    font-size: .2rem;
+  }
+}
+
+/*
+@media only screen and (min-width: 1000px){
+
+}
+
+@media only screen and (min-width:500px) {
+
+
+}
+*/
